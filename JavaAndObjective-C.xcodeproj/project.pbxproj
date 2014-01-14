@@ -10,6 +10,7 @@
 		3D4320FC1885A439009BF200 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4320FB1885A439009BF200 /* Foundation.framework */; };
 		3D4320FF1885A439009BF200 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4320FE1885A439009BF200 /* main.m */; };
 		3D4321031885A439009BF200 /* JavaAndObjective_C.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4321021885A439009BF200 /* JavaAndObjective_C.1 */; };
+		3D4321151885AAE3009BF200 /* WDWObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4321141885AAE3009BF200 /* WDWObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		3D4320FE1885A439009BF200 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D4321011885A439009BF200 /* JavaAndObjective-C-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JavaAndObjective-C-Prefix.pch"; sourceTree = "<group>"; };
 		3D4321021885A439009BF200 /* JavaAndObjective_C.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = JavaAndObjective_C.1; sourceTree = "<group>"; };
+		3D4321131885AAD7009BF200 /* WDWObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDWObject.h; path = Class/WDWObject.h; sourceTree = "<group>"; };
+		3D4321141885AAE3009BF200 /* WDWObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDWObject.m; path = Class/WDWObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +51,7 @@
 		3D4320EF1885A439009BF200 = {
 			isa = PBXGroup;
 			children = (
+				3D43210C1885A70A009BF200 /* Class */,
 				3D4320FD1885A439009BF200 /* JavaAndObjective-C */,
 				3D4320FA1885A439009BF200 /* Frameworks */,
 				3D4320F91885A439009BF200 /* Products */,
@@ -86,6 +90,15 @@
 				3D4321011885A439009BF200 /* JavaAndObjective-C-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D43210C1885A70A009BF200 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				3D4321141885AAE3009BF200 /* WDWObject.m */,
+				3D4321131885AAD7009BF200 /* WDWObject.h */,
+			);
+			name = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D4320FF1885A439009BF200 /* main.m in Sources */,
+				3D4321151885AAE3009BF200 /* WDWObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
