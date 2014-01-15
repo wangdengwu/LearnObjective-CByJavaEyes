@@ -55,7 +55,7 @@ void testPrivate(){
 //测试继承
 void testExtend(){
     WDWObjectPrivate *p=[WDWObjectPrivateChild new];
-//    NSLog(@"%@",[p getString]);//fuck 父类了
+    NSLog(@"%@",[p getString]);//fuck 父类了
     NSLog(@"%@",[p getName]);
     WDWObjectPrivateChild *c=[WDWObjectPrivate new];//有警告，但是可以执行
     NSLog(@"%@",[c getName]);

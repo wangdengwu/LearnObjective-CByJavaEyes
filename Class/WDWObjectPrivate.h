@@ -29,7 +29,7 @@
 
 @interface WDWObjectPrivateChild : WDWObjectPrivate
 
--(void)getString;//可以定义
+-(NSNumber*)getString;//可以定义
 
 //-(NSString*)getString;
 

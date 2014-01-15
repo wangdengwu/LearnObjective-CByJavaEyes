@@ -62,8 +62,8 @@
 //    implPrivate=@"implPrivate";//不可以访问
 }
 
--(void)getString{
-    NSLog(@"print from child");
+-(NSNumber *)getString{
+    return [NSNumber numberWithInt:110];
 }
 
 -(NSString*)getName{
