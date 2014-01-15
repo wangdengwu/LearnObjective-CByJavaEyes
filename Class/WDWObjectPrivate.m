@@ -16,11 +16,13 @@
 }
 
 -(void)test{
+    NSLog(@"test parent");
     private=@"test";
 }
 
 -(NSString *)getString{
     NSLog(@"print from parent");
+    NSLog(@"%@",private);
     return @"parent";
 }
 
@@ -53,7 +55,7 @@
 
 @implementation WDWObjectPrivateChild:WDWObjectPrivate
 
--(void)test{
+-(void)testProperty{
     [super test];
     protected=@"protected";
 //    private=@"private";//不可以访问
@@ -65,6 +67,10 @@
 -(NSNumber *)getString{
     return [NSNumber numberWithInt:110];
 }
+
+//-(NSString*)getString{
+//    
+//}
 
 -(NSString*)getName{
     return @"child";

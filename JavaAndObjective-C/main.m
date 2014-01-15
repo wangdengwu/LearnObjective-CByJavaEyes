@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "WDWObject.h"//通过import引用头文件，没有包的概念，只有前缀WDW
 #import "WDWObjectPrivate.h"
+#import "WDWObjectPrivate+WDWOther.h"
 
 //测试基本的对象属性赋值以及实例方法调用
 void say(){//c语言的特性先定义后调用
@@ -57,9 +58,15 @@ void testExtend(){
     WDWObjectPrivate *p=[WDWObjectPrivateChild new];
     NSLog(@"%@",[p getString]);//fuck 父类了
     NSLog(@"%@",[p getName]);
-    WDWObjectPrivateChild *c=[WDWObjectPrivate new];//有警告，但是可以执行
+    WDWObjectPrivateChild *c=(WDWObjectPrivateChild*)[WDWObjectPrivate new];//有警告，但是可以执行
     NSLog(@"%@",[c getName]);
     [c getString];
+    [c test];//fuck too;
+}
+//测试类别
+void testCategory(){
+    WDWObjectPrivate *p=[WDWObjectPrivate new];
+    [p testCategory];
 }
 int main(int argc, const char * argv[])
 {
@@ -70,7 +77,8 @@ int main(int argc, const char * argv[])
 //        testDescription();
 //        testNPE();
 //        testPrivate();
-        testExtend();
+//        testExtend();
+        testCategory();
         //TODO  继承，类初始化，方法重载，集合类操作，协议，类别，Block
     }
     return 0;

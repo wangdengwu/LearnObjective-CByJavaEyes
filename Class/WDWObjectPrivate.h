@@ -33,5 +33,6 @@
 
 //-(NSString*)getString;
 
+-(void)test;
 
 @end
