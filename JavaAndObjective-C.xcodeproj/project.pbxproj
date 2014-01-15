@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D3783CE1886EECB00861996 /* WDWObjectPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3783CD1886EECB00861996 /* WDWObjectPrivate.m */; };
 		3D4320FC1885A439009BF200 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4320FB1885A439009BF200 /* Foundation.framework */; };
 		3D4320FF1885A439009BF200 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4320FE1885A439009BF200 /* main.m */; };
 		3D4321031885A439009BF200 /* JavaAndObjective_C.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4321021885A439009BF200 /* JavaAndObjective_C.1 */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3D3783CC1886EECB00861996 /* WDWObjectPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDWObjectPrivate.h; path = Class/WDWObjectPrivate.h; sourceTree = "<group>"; };
+		3D3783CD1886EECB00861996 /* WDWObjectPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDWObjectPrivate.m; path = Class/WDWObjectPrivate.m; sourceTree = "<group>"; };
 		3D4320F81885A439009BF200 /* JavaAndObjective-C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "JavaAndObjective-C"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4320FB1885A439009BF200 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3D4320FE1885A439009BF200 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,8 +98,10 @@
 		3D43210C1885A70A009BF200 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				3D4321141885AAE3009BF200 /* WDWObject.m */,
 				3D4321131885AAD7009BF200 /* WDWObject.h */,
+				3D4321141885AAE3009BF200 /* WDWObject.m */,
+				3D3783CC1886EECB00861996 /* WDWObjectPrivate.h */,
+				3D3783CD1886EECB00861996 /* WDWObjectPrivate.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D4320FF1885A439009BF200 /* main.m in Sources */,
+				3D3783CE1886EECB00861996 /* WDWObjectPrivate.m in Sources */,
 				3D4321151885AAE3009BF200 /* WDWObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +271,7 @@
 				3D4321081885A439009BF200 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
