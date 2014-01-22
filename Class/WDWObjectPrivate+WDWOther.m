@@ -17,4 +17,9 @@
 //    WDWObjectPrivate *p=[WDWObjectPrivate new];
 //    [p test];私有的方法，类别也不能调用，但是可以搞私有属性
 }
+//-(NSNumber*)getString{
+//    [self getString];
+//    NSLog(@"category");
+//    return [NSNumber numberWithInt:119];
+//}
 @end

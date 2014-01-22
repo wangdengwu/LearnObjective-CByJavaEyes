@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1704C9188EB47F0064EC57 /* WDWThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1704C8188EB47F0064EC57 /* WDWThread.m */; };
+		3D1704CC188ED3C90064EC57 /* WDWKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1704CB188ED3C90064EC57 /* WDWKVC.m */; };
 		3D2BEBB41886FFE80035449F /* WDWObjectPrivate+WDWOther.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2BEBB31886FFE80035449F /* WDWObjectPrivate+WDWOther.m */; };
 		3D3783CE1886EECB00861996 /* WDWObjectPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3783CD1886EECB00861996 /* WDWObjectPrivate.m */; };
 		3D4320FC1885A439009BF200 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4320FB1885A439009BF200 /* Foundation.framework */; };
 		3D4320FF1885A439009BF200 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4320FE1885A439009BF200 /* main.m */; };
 		3D4321031885A439009BF200 /* JavaAndObjective_C.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4321021885A439009BF200 /* JavaAndObjective_C.1 */; };
 		3D4321151885AAE3009BF200 /* WDWObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4321141885AAE3009BF200 /* WDWObject.m */; };
+		3D6B456C188E768F00EA656B /* WDWParent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6B456B188E768F00EA656B /* WDWParent.m */; };
+		3D93F370188D7A25001E2F78 /* WDWProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D93F36F188D7A25001E2F78 /* WDWProtocol.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +33,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3D1704C7188EB47F0064EC57 /* WDWThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDWThread.h; path = Class/WDWThread.h; sourceTree = "<group>"; };
+		3D1704C8188EB47F0064EC57 /* WDWThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDWThread.m; path = Class/WDWThread.m; sourceTree = "<group>"; };
+		3D1704CA188ED3C90064EC57 /* WDWKVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDWKVC.h; path = Class/WDWKVC.h; sourceTree = "<group>"; };
+		3D1704CB188ED3C90064EC57 /* WDWKVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDWKVC.m; path = Class/WDWKVC.m; sourceTree = "<group>"; };
 		3D2BEBB21886FFE80035449F /* WDWObjectPrivate+WDWOther.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WDWObjectPrivate+WDWOther.h"; path = "Class/WDWObjectPrivate+WDWOther.h"; sourceTree = "<group>"; };
 		3D2BEBB31886FFE80035449F /* WDWObjectPrivate+WDWOther.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "WDWObjectPrivate+WDWOther.m"; path = "Class/WDWObjectPrivate+WDWOther.m"; sourceTree = "<group>"; };
 		3D3783CC1886EECB00861996 /* WDWObjectPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDWObjectPrivate.h; path = Class/WDWObjectPrivate.h; sourceTree = "<group>"; };
@@ -40,6 +48,10 @@
 		3D4321021885A439009BF200 /* JavaAndObjective_C.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = JavaAndObjective_C.1; sourceTree = "<group>"; };
 		3D4321131885AAD7009BF200 /* WDWObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDWObject.h; path = Class/WDWObject.h; sourceTree = "<group>"; };
 		3D4321141885AAE3009BF200 /* WDWObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDWObject.m; path = Class/WDWObject.m; sourceTree = "<group>"; };
+		3D6B456A188E768F00EA656B /* WDWParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDWParent.h; path = Class/WDWParent.h; sourceTree = "<group>"; };
+		3D6B456B188E768F00EA656B /* WDWParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDWParent.m; path = Class/WDWParent.m; sourceTree = "<group>"; };
+		3D93F36E188D7A25001E2F78 /* WDWProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDWProtocol.h; path = Class/WDWProtocol.h; sourceTree = "<group>"; };
+		3D93F36F188D7A25001E2F78 /* WDWProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDWProtocol.m; path = Class/WDWProtocol.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,14 @@
 				3D3783CD1886EECB00861996 /* WDWObjectPrivate.m */,
 				3D2BEBB21886FFE80035449F /* WDWObjectPrivate+WDWOther.h */,
 				3D2BEBB31886FFE80035449F /* WDWObjectPrivate+WDWOther.m */,
+				3D93F36E188D7A25001E2F78 /* WDWProtocol.h */,
+				3D93F36F188D7A25001E2F78 /* WDWProtocol.m */,
+				3D6B456A188E768F00EA656B /* WDWParent.h */,
+				3D6B456B188E768F00EA656B /* WDWParent.m */,
+				3D1704C7188EB47F0064EC57 /* WDWThread.h */,
+				3D1704C8188EB47F0064EC57 /* WDWThread.m */,
+				3D1704CA188ED3C90064EC57 /* WDWKVC.h */,
+				3D1704CB188ED3C90064EC57 /* WDWKVC.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -162,10 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D93F370188D7A25001E2F78 /* WDWProtocol.m in Sources */,
+				3D1704CC188ED3C90064EC57 /* WDWKVC.m in Sources */,
 				3D4320FF1885A439009BF200 /* main.m in Sources */,
+				3D6B456C188E768F00EA656B /* WDWParent.m in Sources */,
 				3D2BEBB41886FFE80035449F /* WDWObjectPrivate+WDWOther.m in Sources */,
 				3D3783CE1886EECB00861996 /* WDWObjectPrivate.m in Sources */,
 				3D4321151885AAE3009BF200 /* WDWObject.m in Sources */,
+				3D1704C9188EB47F0064EC57 /* WDWThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

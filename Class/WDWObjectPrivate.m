@@ -65,6 +65,7 @@
 }
 
 -(NSNumber *)getString{
+    NSLog(@"child getString");
     return [NSNumber numberWithInt:110];
 }
 

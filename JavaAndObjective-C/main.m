@@ -10,10 +10,14 @@
 #import "WDWObject.h"//通过import引用头文件，没有包的概念，只有前缀WDW
 #import "WDWObjectPrivate.h"
 #import "WDWObjectPrivate+WDWOther.h"
+#import "WDWProtocol.h"
+#import "WDWParent.h"
+#import "WDWThread.h"
+#import "WDWKVC.h"
 
 //测试基本的对象属性赋值以及实例方法调用
 void say(){//c语言的特性先定义后调用
-    WDWObject *obj=[WDWObject new];
+    WDWObject *obj=[WDWObject new];//
     obj.age=20;
     obj.man=YES;
     obj.name=@"object-c";//字符串常量
@@ -56,17 +60,71 @@ void testPrivate(){
 //测试继承
 void testExtend(){
     WDWObjectPrivate *p=[WDWObjectPrivateChild new];
-    NSLog(@"%@",[p getString]);//fuck 父类了
+//    NSLog(@"%@",[p getString]);//fuck 父类了
     NSLog(@"%@",[p getName]);
-    WDWObjectPrivateChild *c=(WDWObjectPrivateChild*)[WDWObjectPrivate new];//有警告，但是可以执行
-    NSLog(@"%@",[c getName]);
-    [c getString];
-    [c test];//fuck too;
+//    WDWObjectPrivateChild *c=(WDWObjectPrivateChild*)[WDWObjectPrivate new];//有警告，但是可以执行
+//    NSLog(@"%@",[c getName]);
+//    NSLog(@"%@",[c getString]);
+//    [c test];//fuck too;
 }
 //测试类别
 void testCategory(){
     WDWObjectPrivate *p=[WDWObjectPrivate new];
     [p testCategory];
+}
+//测试集合类，并发要求不高，没有专门的并发集合类
+void testCollection(){
+    NSArray *array1=[NSArray arrayWithObjects:@"1",@"2",@"3",nil];
+    NSMutableArray *array2=[[NSMutableArray alloc]initWithCapacity:3];
+    for (NSString *s in array1) {
+        NSLog(@"%@",s);
+        [array2 addObject:s];
+    }
+    
+//    [array2 addObject:nil];//crash......不可以插入nil
+//    [array2 addObject:[NSNull null]];//可以插入NSNull来代替不存在
+    
+    
+    NSDictionary *map=[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:1],@"1",[NSNumber numberWithInt:2],@"2",[NSNumber numberWithInt:3],@"3",nil];
+    
+    NSMutableDictionary *map2=[[NSMutableDictionary alloc]initWithCapacity:3];
+    
+    [map enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop){
+        NSLog(@"%@ is %@ and need stop? %s",key,obj,stop);
+        [map2 setObject:obj forKey:key];
+    }];
+    
+//    [map2 setObject:nil forKey:@"nil"];//同样不能把nil作为key或id
+//    [map2 setObject:@"nil" forKey:nil];
+    [map2 setObject:[NSNull null] forKey:@"nil"];
+    
+}
+
+void testDelegate(){
+    WDWProtocolDidDo *did=[WDWProtocolDidDo new];
+    WDWProtocol *protocol=[[WDWProtocol alloc]initWithDelegate:did];
+    [protocol doWhateverYouLike];
+    [protocol doWhateverYouLove];
+}
+
+void testChildMethod(){
+    WDWChild *child=[WDWChild new];
+    [child viewDidLoad];
+    WDWParent *p=[WDWParent new];
+    [p viewDidLoad];
+}
+
+void testThread(){
+    WDWThread *t1=[WDWThread new];
+    [t1 addFrom:1 to:1000000];
+}
+void testKVC(){
+    WDWKVC *kvc=[WDWKVC new];
+//    NSString *name=[kvc valueForKeyPath:@"obj1.obj2.obj3.objs[2].name"];
+//    NSLog(@"name:%@",name);
+    NSLog(@"index sum=%@",[kvc valueForKeyPath:@"obj1.obj2.obj3.objs.@sum.index"]);
+    NSLog(@"index avg=%@",[kvc valueForKeyPath:@"obj1.obj2.obj3.objs.@avg.index"]);
+    NSLog(@"index max=%@",[kvc valueForKeyPath:@"obj1.obj2.obj3.objs.@max.index"]);
 }
 int main(int argc, const char * argv[])
 {
@@ -78,8 +136,12 @@ int main(int argc, const char * argv[])
 //        testNPE();
 //        testPrivate();
 //        testExtend();
-        testCategory();
-        //TODO  继承，类初始化，方法重载，集合类操作，协议，类别，Block
+//        testChildMethod();
+//        testCollection();
+//        testCategory();
+//        testDelegate();
+//        testThread();
+//        testKVC();
     }
     return 0;
 }

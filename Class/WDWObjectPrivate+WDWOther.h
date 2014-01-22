@@ -11,4 +11,5 @@
 @interface WDWObjectPrivate (WDWOther)
 
 -(void)testCategory;
+//-(NSNumber*)getString;
 @end
