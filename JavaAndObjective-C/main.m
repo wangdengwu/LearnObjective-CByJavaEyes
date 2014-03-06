@@ -74,7 +74,7 @@ void testCategory(){
 }
 //测试集合类，并发要求不高，没有专门的并发集合类
 void testCollection(){
-    NSArray *array1=[NSArray arrayWithObjects:@"1",@"2",@"3",nil];
+    NSArray *array1=@[@"1",@"2",@"3"];//[NSArray arrayWithObjects:@"1",@"2",@"3",nil];
     NSMutableArray *array2=[[NSMutableArray alloc]initWithCapacity:3];
     for (NSString *s in array1) {
         NSLog(@"%@",s);
@@ -84,8 +84,7 @@ void testCollection(){
 //    [array2 addObject:nil];//crash......不可以插入nil
 //    [array2 addObject:[NSNull null]];//可以插入NSNull来代替不存在
     
-    
-    NSDictionary *map=[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:1],@"1",[NSNumber numberWithInt:2],@"2",[NSNumber numberWithInt:3],@"3",nil];
+    NSDictionary *map=@{@1:@"1",@2:@"2",@3:@"3"};
     
     NSMutableDictionary *map2=[[NSMutableDictionary alloc]initWithCapacity:3];
     
@@ -137,7 +136,7 @@ int main(int argc, const char * argv[])
 //        testPrivate();
 //        testExtend();
 //        testChildMethod();
-//        testCollection();
+        testCollection();
 //        testCategory();
 //        testDelegate();
 //        testThread();
